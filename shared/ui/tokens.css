@@ -4,7 +4,7 @@
   /* warna */
   --merah:#D62828;  --merah-tua:#B01F1F;
   --kuning:#FBBF24; --kuning-tua:#E0A612;
-  --krem:#FCF8EC;   --krem-gelap:#F3EBDA;
+  --krem:#FCF8EC;   --krem-gelap:#F3EBDA; --peach:#FCE8D6;
   --lime:#DDEB9D;   --hijau:#4CAF7D;
   --tinta:#2B2B2B;  --tinta-lembut:#6B6259;  --putih:#FFFFFF;
   /* garis dan bentuk */
@@ -55,4 +55,14 @@
   /* Checkbox, Radio, Stepper, Rangka */
   --kotak-pilih:1.5rem;
   --lebar-stepper:3.5rem;
+  /* Peta Leaflet (DESIGN bagian 5) */
+  --tinggi-peta-pilih-mobile:280px;
+  --tinggi-peta-pilih-desktop:360px;
+  --tinggi-peta-rute:280px;
+  --tinggi-peta-kosong:8.75rem;
+  --ukuran-penanda-peta:1.375rem;
+  --ukuran-penanda-motor:1.875rem;
+  --garis-penanda-peta:.1875rem solid var(--putih);
+  --garis-penanda-motor:.125rem solid var(--putih);
+  --bayang-penanda:0 .0625rem .3125rem var(--tinta);
 }

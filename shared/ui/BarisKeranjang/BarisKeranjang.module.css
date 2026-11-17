@@ -1,0 +1,8 @@
+.baris { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: var(--j3); padding: var(--j3) 0; border-bottom: var(--garis); }
+.foto { align-self: start; }
+.detail { display: flex; min-width: 0; flex-direction: column; gap: var(--j2); }
+.judul { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--j2); }
+.judul h3 { margin: 0; font-size: var(--teks-isi); overflow-wrap: anywhere; }
+.opsi { margin: 0; color: var(--tinta-lembut); font-size: var(--teks-kecil); line-height: 1.4; }
+.bawah { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--j2); }
+.total { font-variant-numeric: tabular-nums; }

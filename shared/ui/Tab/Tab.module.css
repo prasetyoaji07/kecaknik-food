@@ -1,0 +1,7 @@
+.tab{display:inline-flex;align-items:center;gap:var(--j1);max-width:100%;padding:var(--j1);border:var(--garis);border-radius:var(--r-pill);background:var(--krem-gelap);overflow-x:auto}
+.tombol{min-height:var(--tinggi-sentuh);display:inline-flex;align-items:center;justify-content:center;gap:var(--j2);padding:var(--j2) var(--j4);border:0;border-radius:var(--r-pill);background:transparent;color:var(--tinta);font:inherit;font-weight:800;white-space:nowrap;cursor:pointer;transition:background var(--d1) var(--ease),color var(--d1) var(--ease)}
+.tombol:hover{background:var(--putih)}
+.tombol:focus-visible{outline:var(--ring);outline-offset:var(--ring-offset)}
+.aktif{background:var(--merah);color:var(--putih);box-shadow:var(--bayang-tekan)}
+.aktif:hover{background:var(--merah-tua)}
+.jumlah{padding:var(--j1) var(--j2);border-radius:var(--r-pill);background:var(--krem);color:var(--tinta);font-size:var(--teks-kecil)}

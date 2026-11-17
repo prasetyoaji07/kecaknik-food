@@ -2,7 +2,7 @@
    Radix membungkus panel dengan elemen berposisi inline (transform), jadi menimpanya perlu
    !important dan penanda `data-lembar-pilihan` pada panel. CSS biasa (bukan module) agar
    selektor atribut Radix tidak diubah namanya. */
-@media (max-width: 767px) {
+@media (max-width: 47.9375rem) {
   [data-radix-popper-content-wrapper]:has(> [data-lembar-pilihan]) {
     position: fixed !important;
     left: 0 !important;

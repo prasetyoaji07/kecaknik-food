@@ -3,7 +3,7 @@
 .wajib { color: var(--merah-tua); }
 
 .daftar { display: grid; gap: var(--j3); grid-template-columns: 1fr; }
-@media (min-width: 480px) { .daftar { grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); } }
+@media (min-width: 30rem) { .daftar { grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); } }
 .satuKolom { grid-template-columns: 1fr; }
 
 .kartu {

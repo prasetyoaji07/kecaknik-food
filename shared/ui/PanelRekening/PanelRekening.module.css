@@ -1,0 +1,14 @@
+.panel { display: flex; flex-direction: column; gap: var(--j3); padding: var(--j4); border: var(--garis); border-radius: var(--r-lg); background: var(--putih); }
+.kepala { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: var(--j2); }
+.kepala h3 { margin: 0; font-size: var(--teks-h3); }
+.kepala strong { font-variant-numeric: tabular-nums; }
+.tab { display: flex; gap: var(--j2); overflow-x: auto; padding: var(--j1) 0; }
+.tombolTab { min-height: var(--tinggi-sentuh); flex: 1; padding: 0 var(--j3); border: var(--garis); border-radius: var(--r-pill); background: var(--putih); color: var(--tinta); font: inherit; font-weight: 700; cursor: pointer; }
+.tombolTab[aria-selected='true'] { background: var(--lime); border: var(--garis-tebal); }
+.tombolTab:focus-visible { outline: var(--ring); outline-offset: var(--ring-offset); }
+.tombolTab:disabled { opacity: .45; cursor: not-allowed; }
+.isi { display: flex; flex-direction: column; align-items: flex-start; gap: var(--j2); padding: var(--j3); border-radius: var(--r-md); background: var(--krem); }
+.label { color: var(--tinta-lembut); font-size: var(--teks-kecil); }
+.nomorBaris { display: flex; width: 100%; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--j2); }
+.nomor { font-family: var(--font-display); font-size: clamp(1rem, .8rem + 1vw, 1.5rem); overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.galat { margin: 0; color: var(--merah-tua); font-size: var(--teks-kecil); }

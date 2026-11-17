@@ -10,7 +10,7 @@
   gap: var(--j2);
   pointer-events: none; /* area kosong tidak menghalangi klik di belakangnya */
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .wadah { left: auto; top: var(--j4); bottom: auto; align-items: flex-end; }
 }
 

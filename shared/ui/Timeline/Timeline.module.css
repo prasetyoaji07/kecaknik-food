@@ -1,0 +1,17 @@
+.timeline { display: flex; flex-direction: column; gap: 0; margin: 0; padding: 0; list-style: none; }
+.langkah { position: relative; display: flex; min-height: 3.75rem; align-items: flex-start; gap: var(--j3); padding: 0 0 var(--j4); }
+.langkah:not(:last-child)::before { position: absolute; top: 1.5rem; bottom: 0; left: .7rem; width: calc(var(--j1) / 2); background: var(--krem-gelap); content: ''; }
+.penanda { z-index: 1; display: flex; width: 1.5rem; height: 1.5rem; flex: none; align-items: center; justify-content: center; border: var(--garis); border-radius: var(--r-pill); background: var(--putih); color: var(--putih); }
+.penanda span { width: .5rem; height: .5rem; border-radius: var(--r-pill); background: var(--tinta-lembut); }
+.selesai .penanda { border-color: var(--hijau); background: var(--hijau); }
+.aktif .penanda { border-color: var(--merah); background: var(--merah); }
+.aktif .penanda span { background: var(--putih); }
+.mendatang .penanda { border-color: var(--krem-gelap); }
+.mendatang .penanda span { background: var(--krem-gelap); }
+.teks { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: var(--j1); padding-top: var(--j1); }
+.nama { font-weight: 600; }
+.mendatang .nama { color: var(--tinta-lembut); font-weight: 500; }
+.keterangan { color: var(--tinta-lembut); font-size: var(--teks-kecil); }
+.saatIni { padding: var(--j1) var(--j2); border-radius: var(--r-pill); background: var(--lime); color: var(--tinta); font-size: var(--teks-kecil); font-weight: 700; white-space: nowrap; }
+.dibatalkan .penanda { border-color: var(--merah); background: var(--putih); }
+.dibatalkan .penanda span { background: var(--merah); }

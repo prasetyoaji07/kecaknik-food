@@ -1,0 +1,2 @@
+.halaman{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;overflow-x:clip}
+.konten{width:100%;max-width:var(--lebar-konten);margin:0 auto;padding:var(--j6) var(--gutter) var(--j8);flex:1}

@@ -19,7 +19,7 @@
   background: var(--krem);
   animation: geser var(--d3) var(--ease);
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .panel { width: var(--lebar-laci); border-left: var(--garis-tebal); }
 }
 

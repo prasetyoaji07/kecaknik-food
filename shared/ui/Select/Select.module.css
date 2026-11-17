@@ -57,7 +57,7 @@
 /* latar redup di belakang lembar bawah, hanya tampil di layar kecil */
 .tabir { display: none; }
 
-@media (max-width: 767px) {
+@media (max-width: 47.9375rem) {
   .tabir {
     display: block;
     position: fixed;

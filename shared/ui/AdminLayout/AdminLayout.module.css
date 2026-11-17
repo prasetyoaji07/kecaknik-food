@@ -1,0 +1,19 @@
+.aplikasi{min-height:100vh;display:grid;grid-template-columns:15rem minmax(0,1fr);background:var(--krem);color:var(--tinta)}
+.sidebar{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:var(--j4);padding:var(--j5) var(--j4);background:var(--merah);color:var(--krem);overflow-y:auto}
+.logo{display:flex;justify-content:center;padding-bottom:var(--j3);border-bottom:var(--garis)}
+.labelNavigasi{margin:var(--j2) 0 0;color:var(--peach);font-size:var(--teks-kecil);font-weight:800;letter-spacing:.08em}
+.daftar{display:grid;gap:var(--j2)}
+.tautan{min-height:var(--tinggi-sentuh);display:flex;align-items:center;gap:var(--j3);padding:var(--j2) var(--j3);border-radius:var(--r-md);color:inherit;text-decoration:none;font-weight:700;transition:background var(--d1) var(--ease),color var(--d1) var(--ease)}
+.tautan:hover,.aktif{background:var(--krem);color:var(--merah-tua)}
+.ikon{width:1.5rem;flex:0 0 1.5rem;display:grid;place-items:center;font-size:1.15rem}
+.jumlah{margin-left:auto;padding:var(--j1) var(--j2);border-radius:var(--r-pill);background:var(--kuning);color:var(--tinta);font-size:var(--teks-kecil)}
+.footerSidebar{margin-top:auto;padding-top:var(--j4);border-top:var(--garis)}
+.area{min-width:0}
+.bilahAtas{position:sticky;top:0;z-index:var(--z-header);min-height:4.5rem;display:flex;align-items:center;gap:var(--j3);padding:var(--j3) var(--gutter);background:var(--putih);border-bottom:var(--garis)}
+.judulAtas{margin:0;font-family:var(--font-display);font-size:var(--teks-h3);line-height:1.2}
+.aksi{margin-left:auto;display:flex;align-items:center;gap:var(--j2)}
+.logoMobile,.tombolMenu{display:none}
+.konten{width:min(100%,var(--lebar-konten));margin-inline:auto;padding:var(--j5) var(--gutter) var(--j8)}
+.tabir,.laci{display:none}
+@media(min-width:768px) and (max-width:1023px){.aplikasi{grid-template-columns:5rem minmax(0,1fr)}.sidebar{align-items:center;padding-inline:var(--j2)}.logo{width:100%}.labelNavigasi{font-size:0}.tautan{justify-content:center;padding-inline:var(--j2)}.teksTautan{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.jumlah{display:none}.footerSidebar{display:none}}
+@media(max-width:767px){.aplikasi{display:block}.sidebar{display:none}.bilahAtas{min-height:4rem}.tombolMenu{display:inline-flex}.logoMobile{display:flex}.judulAtas{font-size:1.1rem}.konten{padding-top:var(--j4)}.tabir{position:fixed;inset:0;z-index:calc(var(--z-drawer) - 1);display:block;border:0;background:var(--tabir)}.laci{position:fixed;inset:0 auto 0 0;z-index:var(--z-drawer);width:min(19rem,86vw);display:flex;flex-direction:column;gap:var(--j2);padding:var(--j5) var(--j3);background:var(--merah);color:var(--krem);box-shadow:var(--bayang-keras);overflow-y:auto}.tautanMobile{justify-content:flex-start}.tautanMobile .teksTautan{position:static;width:auto;height:auto;overflow:visible;clip-path:none}.tautanMobile .jumlah{display:inline-flex}}

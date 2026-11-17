@@ -13,7 +13,8 @@
     "@fontsource/inter": "^5.1.0",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-select": "^2.1.2",
-    "lucide-react": "^0.460.0"
+    "lucide-react": "^0.460.0",
+    "leaflet": "^1.9.4"
   },
   "peerDependencies": {
     "react": "^18.3.1",

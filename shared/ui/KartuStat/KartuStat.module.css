@@ -1,0 +1,6 @@
+.kartu{min-width:0;display:flex;flex-direction:column;gap:var(--j2);padding:var(--j4);border:var(--garis);border-radius:var(--r-lg);background:var(--putih);box-shadow:var(--bayang-kartu)}
+.kepala{display:flex;align-items:center;justify-content:space-between;gap:var(--j2)}
+.label{margin:0;color:var(--tinta-lembut);font-size:var(--teks-kecil);font-weight:800}
+.ikon{width:2.5rem;height:2.5rem;display:grid;place-items:center;border-radius:var(--r-md);background:var(--kuning);font-size:1.25rem}
+.nilai{margin:0;font-family:var(--font-display);font-size:clamp(1.5rem,1.2rem + 1.5vw,2.25rem);line-height:1.15;overflow-wrap:anywhere}
+.keterangan{margin:0;color:var(--tinta-lembut);font-size:var(--teks-kecil)}

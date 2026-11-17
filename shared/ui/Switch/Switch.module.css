@@ -1,0 +1,11 @@
+.baris{min-height:var(--tinggi-sentuh);display:inline-flex;align-items:center;gap:var(--j3);cursor:pointer}
+.teks{display:grid;gap:var(--j1)}
+.label{font-weight:800}
+.deskripsi{color:var(--tinta-lembut);font-size:var(--teks-kecil)}
+.input{position:absolute;width:.0625rem;height:.0625rem;opacity:0}
+.track{width:3.25rem;height:1.875rem;display:flex;align-items:center;padding:var(--j1);border:var(--garis);border-radius:var(--r-pill);background:var(--krem-gelap);transition:background var(--d1) var(--ease)}
+.bulat{width:1.25rem;height:1.25rem;border:var(--garis);border-radius:50%;background:var(--putih);box-shadow:var(--bayang-tekan);transition:transform var(--d1) var(--ease)}
+.input:checked+.track{background:var(--hijau)}
+.input:checked+.track .bulat{transform:translateX(1.25rem)}
+.input:focus-visible+.track{outline:var(--ring);outline-offset:var(--ring-offset)}
+.nonaktif{cursor:not-allowed;opacity:.55}

@@ -46,7 +46,7 @@
   background: var(--krem);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .panel {
     top: 50%;
     left: 50%;

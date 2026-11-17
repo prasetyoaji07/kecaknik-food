@@ -1,0 +1,7 @@
+.daftar { display: flex; flex-direction: column; gap: var(--j5); }
+.grup { display: flex; min-width: 0; flex-direction: column; gap: var(--j2); margin: 0; padding: 0; border: 0; }
+.legenda { padding: 0; font-weight: 700; font-size: var(--teks-isi); }
+.wajib { color: var(--merah-tua); }
+.deskripsi, .bantuan { margin: 0; color: var(--tinta-lembut); font-size: var(--teks-kecil); }
+.opsi { display: flex; flex-direction: column; gap: var(--j3); }
+.galat { margin: 0; color: var(--merah-tua); font-size: var(--teks-kecil); font-weight: 600; }

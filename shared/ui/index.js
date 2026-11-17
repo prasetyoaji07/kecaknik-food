@@ -24,3 +24,27 @@ export { ToastProvider, useToast } from './Toast/Toast.jsx';
 export { Dropzone } from './Dropzone/Dropzone.jsx';
 export { KeadaanKosong } from './KeadaanKosong/KeadaanKosong.jsx';
 export { Rangka } from './Rangka/Rangka.jsx';
+// U13
+export { KartuProduk } from './KartuProduk/KartuProduk.jsx';
+export { FotoProduk } from './FotoProduk/FotoProduk.jsx';
+export { GrupOpsi } from './GrupOpsi/GrupOpsi.jsx';
+export { BarisKeranjang } from './BarisKeranjang/BarisKeranjang.jsx';
+export { Timeline } from './Timeline/Timeline.jsx';
+export { PanelRekening } from './PanelRekening/PanelRekening.jsx';
+
+// U14
+export { PetaPilih } from './PetaPilih/PetaPilih.jsx';
+export { PetaRute } from './PetaRute/PetaRute.jsx';
+export { TombolWa } from './TombolWa/TombolWa.jsx';
+
+// U15
+export { HeaderSitus } from './HeaderSitus/HeaderSitus.jsx';
+export { FooterSitus } from './FooterSitus/FooterSitus.jsx';
+export { PelangganLayout } from './PelangganLayout/PelangganLayout.jsx';
+
+// U21 — komponen admin
+export { AdminLayout } from './AdminLayout/AdminLayout.jsx';
+export { TabelData } from './TabelData/TabelData.jsx';
+export { Tab } from './Tab/Tab.jsx';
+export { KartuStat } from './KartuStat/KartuStat.jsx';
+export { Switch } from './Switch/Switch.jsx';

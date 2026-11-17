@@ -1,0 +1,10 @@
+.kontainer { display: flex; flex-direction: column; gap: var(--j2); min-width: 0; }
+.peta { z-index: 0; width: 100%; height: var(--tinggi-peta-pilih-mobile); overflow: hidden; border: var(--garis); border-radius: var(--r-lg); background: var(--krem-gelap); }
+.kontrol { display: flex; flex-wrap: wrap; align-items: center; gap: var(--j2) var(--j3); }
+.petunjuk { display: inline-flex; align-items: center; gap: var(--j1); color: var(--tinta-lembut); font-size: var(--teks-kecil); }
+.galat { margin: 0; color: var(--merah-tua); font-size: var(--teks-kecil); }
+.koordinat { margin: 0; color: var(--tinta-lembut); font-size: var(--teks-kecil); font-variant-numeric: tabular-nums; }
+.bungkusIkon { border: 0; background: transparent; }
+:global(.penanda-peta-pilih) { display: block; width: var(--ukuran-penanda-peta); height: var(--ukuran-penanda-peta); border: var(--garis-penanda-peta); border-radius: 50% 50% 50% 0; background: var(--merah); box-shadow: var(--bayang-penanda); transform: rotate(-45deg); }
+.lingkaranAkurasi { stroke: var(--merah); fill: var(--merah); fill-opacity: .12; }
+@media (min-width: 48rem) { .peta { height: var(--tinggi-peta-pilih-desktop); } }
