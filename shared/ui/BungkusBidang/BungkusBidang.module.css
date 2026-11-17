@@ -1,0 +1,18 @@
+.bidang { display: flex; flex-direction: column; gap: var(--j1); min-width: 0; }
+.label { font-weight: 600; font-size: var(--teks-kecil); }
+.wajib { color: var(--merah-tua); }
+.bantuan { margin: 0; font-size: var(--teks-kecil); color: var(--tinta-lembut); }
+.bawah { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--j3); }
+.langsung { flex: 1; min-width: 0; }
+.galat {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--j1);
+  margin: 0;
+  font-size: var(--teks-kecil);
+  font-weight: 600;
+  color: var(--merah-tua);
+}
+.galat svg { flex: none; margin-top: var(--j1); }
+.petunjuk { margin: 0; font-size: var(--teks-kecil); color: var(--tinta-lembut); }
+.penghitung { font-size: var(--teks-kecil); color: var(--tinta-lembut); font-variant-numeric: tabular-nums; }

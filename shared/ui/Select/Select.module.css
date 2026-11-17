@@ -1,0 +1,80 @@
+.pemicu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--j2);
+  width: 100%;
+  min-height: var(--tinggi-sentuh);
+  padding: 0 var(--j4);
+  background: var(--putih);
+  color: var(--tinta);
+  border: var(--garis);
+  border-radius: var(--r-md);
+  font-family: var(--font-isi);
+  font-size: var(--teks-isi);
+  text-align: left;
+  cursor: pointer;
+}
+.pemicu > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pemicu[data-placeholder] { color: var(--tinta-lembut); }
+.pemicu[data-disabled] { background: var(--krem-gelap); color: var(--tinta-lembut); cursor: not-allowed; }
+.pemicuGalat { border-color: var(--merah-tua); }
+.panah { flex: none; transition: transform var(--d2) var(--ease); }
+.pemicu[data-state='open'] .panah { transform: rotate(180deg); }
+
+/* panel (desktop): selebar pemicu, tidak lebih sempit dari batas minimum */
+.panel {
+  z-index: var(--z-select);
+  width: var(--radix-select-trigger-width);
+  min-width: var(--lebar-panel-min);
+  max-height: min(var(--tinggi-panel-maks), var(--radix-select-content-available-height));
+  overflow: hidden;
+  background: var(--putih);
+  border: var(--garis);
+  border-radius: var(--r-md);
+  box-shadow: var(--bayang-keras);
+}
+.daftar { padding: var(--j1); }
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--j3);
+  min-height: var(--tinggi-sentuh);
+  padding: 0 var(--j3);
+  border-radius: var(--r-sm);
+  font-size: var(--teks-isi);
+  cursor: pointer;
+  user-select: none;
+  outline: 0;
+}
+.item[data-highlighted] { background: var(--krem-gelap); }
+.item[data-state='checked'] { background: var(--lime); font-weight: 600; }
+.item[data-disabled] { color: var(--tinta-lembut); cursor: not-allowed; }
+.centang { display: inline-flex; flex: none; }
+
+/* latar redup di belakang lembar bawah, hanya tampil di layar kecil */
+.tabir { display: none; }
+
+@media (max-width: 767px) {
+  .tabir {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-select);
+    background: var(--tinta);
+    opacity: .4;
+    pointer-events: none;
+  }
+  .panel {
+    width: 100%;
+    min-width: 0;
+    max-height: 70vh;
+    border-width: var(--j1) 0 0;
+    border-radius: var(--r-lg) var(--r-lg) 0 0;
+    box-shadow: none;
+  }
+  .daftar { padding: var(--j2) var(--j2) calc(var(--j4) + env(safe-area-inset-bottom)); }
+  .item { min-height: var(--j7); }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "kecaknik-food",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sistem pemesanan makanan Kecaknik Food (React + Express + MySQL)",
+  "workspaces": [
+    "backend",
+    "customer-app",
+    "admin-app",
+    "shared"
+  ],
+  "scripts": {
+    "db:reset": "node database/reset.mjs",
+    "dev:backend": "npm run dev -w backend",
+    "dev:pelanggan": "npm run dev -w customer-app",
+    "dev:admin": "npm run dev -w admin-app",
+    "build:pelanggan": "npm run build -w customer-app",
+    "build:admin": "npm run build -w admin-app",
+    "lint": "eslint .",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "globals": "^15.12.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

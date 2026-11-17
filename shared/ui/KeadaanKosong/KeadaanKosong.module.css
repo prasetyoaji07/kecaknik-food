@@ -1,0 +1,21 @@
+.kosong {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--j3);
+  padding: var(--j7) var(--j4);
+  text-align: center;
+}
+
+.gambar { width: var(--j9); height: var(--j9); }
+
+/* semua warna ilustrasi dari token */
+.garis { fill: none; stroke: var(--tinta); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.isi { fill: var(--kuning); stroke: none; }
+.kaca { fill: var(--putih); stroke: var(--tinta); stroke-width: 3; }
+.tutup { fill: var(--merah); stroke: var(--tinta); stroke-width: 3; }
+.titik { fill: var(--tinta); stroke: none; }
+
+.judul { margin: 0; }
+.deskripsi { margin: 0; max-width: 32rem; color: var(--tinta-lembut); }
+.tindakan { margin-top: var(--j2); }

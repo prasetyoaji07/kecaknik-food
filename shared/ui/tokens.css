@@ -1,0 +1,58 @@
+/* Token desain Kecaknik Food. Persis DESIGN.md bagian 2: semua nilai berasal dari sini.
+   Dilarang hex atau px literal di CSS komponen atau halaman. */
+:root{
+  /* warna */
+  --merah:#D62828;  --merah-tua:#B01F1F;
+  --kuning:#FBBF24; --kuning-tua:#E0A612;
+  --krem:#FCF8EC;   --krem-gelap:#F3EBDA;
+  --lime:#DDEB9D;   --hijau:#4CAF7D;
+  --tinta:#2B2B2B;  --tinta-lembut:#6B6259;  --putih:#FFFFFF;
+  /* garis dan bentuk */
+  --garis:2px solid var(--tinta);  --garis-tebal:3px solid var(--tinta);
+  --r-sm:10px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  /* bayangan: keras untuk benda yang bisa ditekan, lembut tipis untuk kartu diam */
+  --bayang-keras:3px 3px 0 var(--tinta);
+  --bayang-tekan:1px 1px 0 var(--tinta);
+  --bayang-kartu:0 6px 16px -10px rgba(43,43,43,.35);
+  /* jarak (kelipatan 4) */
+  --j1:4px; --j2:8px; --j3:12px; --j4:16px; --j5:24px; --j6:32px; --j7:48px; --j8:64px; --j9:96px;
+  /* tata letak */
+  --lebar-konten:1200px; --gutter:16px;           /* 24px mulai 768, 32px mulai 1024 */
+  --tinggi-sentuh:44px;
+  /* gerak */
+  --ease:cubic-bezier(.2,.8,.2,1); --d1:120ms; --d2:200ms; --d3:320ms;
+  /* lapisan */
+  --z-header:20; --z-drawer:40; --z-modal:50; --z-select:60; --z-toast:70;
+}
+@media (min-width:768px){:root{--gutter:24px}}
+@media (min-width:1024px){:root{--gutter:32px}}
+
+/* Turunan (bukan warna baru): nilai yang dipakai komponen tetapi tidak ada di daftar di atas,
+   dikumpulkan di sini agar CSS komponen tetap bebas px dan hex literal. */
+:root{
+  --font-display:'Archivo Black', system-ui, sans-serif;
+  --font-isi:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* skala tipografi (DESIGN bagian 3) */
+  --teks-h1:clamp(2.25rem, 1.2rem + 4vw, 4.5rem);
+  --teks-h2:clamp(1.75rem, 1.1rem + 2.4vw, 2.75rem);
+  --teks-h3:1.375rem;
+  --teks-isi:1rem;
+  --teks-kecil:.875rem;
+  /* fokus keyboard (DESIGN bagian 4) dan gerak tekan tombol */
+  --ring:3px solid var(--kuning);
+  --ring-offset:2px;
+  --tekan:2px;
+  /* Select (DESIGN bagian 7) */
+  --lebar-panel-min:200px;
+  --tinggi-panel-maks:320px;
+  /* Modal, Laci, Toast (DESIGN bagian 5): 36rem, 30rem = 480 px, 24rem */
+  --lebar-modal:36rem;
+  --lebar-laci:30rem;
+  --lebar-toast:24rem;
+  --tinggi-lembar-maks:calc(100dvh - var(--j7));
+  --tabir:rgba(43,43,43,.55);
+  --garis-putus:2px dashed var(--tinta);
+  /* Checkbox, Radio, Stepper, Rangka */
+  --kotak-pilih:1.5rem;
+  --lebar-stepper:3.5rem;
+}

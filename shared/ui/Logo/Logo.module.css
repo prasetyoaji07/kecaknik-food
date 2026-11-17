@@ -1,0 +1,42 @@
+.lencana {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--j2); /* ruang kosong minimal --j2 di sekeliling logo */
+  background: var(--krem);
+  border: var(--garis);
+  border-radius: var(--r-md);
+  line-height: 0;
+  text-decoration: none;
+  flex: none;
+}
+.tautan { cursor: pointer; }
+
+/* Tinggi logo (tanpa lencana) lewat token: sm --j6, md --j7, lg --j8 */
+.sm .gambar { height: var(--j6); }
+.md .gambar { height: var(--j7); }
+.lg .gambar { height: var(--j8); }
+.sm .teks { min-height: var(--j6); }
+.md .teks { min-height: var(--j7); }
+.lg .teks { min-height: var(--j8); }
+
+.gambar {
+  width: auto;
+  max-width: none;
+  object-fit: contain; /* rasio asli dijaga */
+  user-select: none;
+}
+
+/* cadangan bila gambar gagal dimuat */
+.teks {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--j3);
+  background: var(--merah);
+  color: var(--kuning);
+  border-radius: var(--r-sm);
+  font-family: var(--font-display);
+  font-size: var(--teks-kecil);
+  letter-spacing: .02em;
+  line-height: 1;
+}

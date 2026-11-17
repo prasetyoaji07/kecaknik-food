@@ -1,0 +1,61 @@
+.bidang { display: flex; flex-direction: column; gap: var(--j2); min-width: 0; }
+.label { font-weight: 600; font-size: var(--teks-kecil); }
+.wajib { color: var(--merah-tua); }
+
+.area {
+  display: flex;
+  border-radius: var(--r-lg);
+  background: var(--putih);
+}
+
+/* kosong: area putus-putus yang juga bisa difokus lewat input tersembunyi */
+.kosong {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--j2);
+  min-height: var(--j9);
+  padding: var(--j5) var(--j4);
+  border: var(--garis-putus);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color var(--d1) var(--ease);
+}
+.kosong:hover:not(.mati) { background: var(--krem-gelap); }
+.menyeret { background: var(--lime); border-style: solid; }
+.mati { background: var(--krem-gelap); color: var(--tinta-lembut); cursor: not-allowed; }
+.galat { border-color: var(--merah-tua); }
+
+.ajakan { font-weight: 600; }
+.batas { font-size: var(--teks-kecil); color: var(--tinta-lembut); }
+
+/* terpilih: pratinjau + nama + aksi */
+.terpilih {
+  flex-direction: column;
+  gap: var(--j4);
+  padding: var(--j3);
+  border: var(--garis);
+  box-shadow: var(--bayang-kartu);
+}
+@media (min-width: 480px) { .terpilih { flex-direction: row; align-items: center; } }
+
+.pratinjau {
+  width: 100%;
+  max-height: var(--tinggi-panel-maks);
+  object-fit: cover;
+  border: var(--garis);
+  border-radius: var(--r-md);
+  background: var(--krem-gelap);
+}
+@media (min-width: 480px) { .pratinjau { width: var(--j9); height: var(--j9); flex: none; } }
+
+.info { display: flex; flex-direction: column; gap: var(--j1); min-width: 0; flex: 1; }
+.nama { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.ukuran { margin: 0; font-size: var(--teks-kecil); color: var(--tinta-lembut); font-variant-numeric: tabular-nums; }
+.aksi { display: flex; flex-wrap: wrap; gap: var(--j2); margin-top: var(--j2); }
+
+.bantuan { margin: 0; font-size: var(--teks-kecil); color: var(--tinta-lembut); }
+.pesanGalat { margin: 0; font-size: var(--teks-kecil); font-weight: 600; color: var(--merah-tua); }
+
+/* fokus keyboard pada input tersembunyi tampil di area kosong */
+.bidang:has(input:focus-visible) .kosong { outline: var(--ring); outline-offset: var(--ring-offset); }

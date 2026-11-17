@@ -1,0 +1,20 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--j5);
+  padding: 0 var(--j3);
+  border: var(--garis);
+  border-radius: var(--r-pill);
+  font-size: var(--teks-kecil);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.netral { background: var(--putih); color: var(--tinta); }
+.kuning { background: var(--kuning); color: var(--tinta); }
+.hijau { background: var(--hijau); color: var(--tinta); }
+.merah { background: var(--putih); color: var(--merah-tua); border-color: var(--merah); }
+
+/* kanal dan tipe selalu netral dan tenang, agar tidak bersaing dengan status */
+.kanal, .tipe { background: var(--krem-gelap); color: var(--tinta); font-weight: 600; }

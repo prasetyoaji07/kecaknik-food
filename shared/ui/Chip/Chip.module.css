@@ -1,0 +1,39 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--j2);
+  flex: none;
+  min-height: var(--tinggi-sentuh);
+  padding: 0 var(--j4);
+  background: var(--putih);
+  color: var(--tinta);
+  border: var(--garis);
+  border-radius: var(--r-pill);
+  font-family: var(--font-isi);
+  font-size: var(--teks-isi);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--d1) var(--ease);
+}
+.chip:hover:not(:disabled):not(.terpilih) { background: var(--krem-gelap); }
+.chip:disabled { background: var(--krem-gelap); color: var(--tinta-lembut); border-color: var(--tinta-lembut); cursor: not-allowed; }
+
+.terpilih { background: var(--merah); color: var(--krem); }
+.terpilih:hover { background: var(--merah-tua); }
+
+.jumlah { font-size: var(--teks-kecil); font-variant-numeric: tabular-nums; opacity: .8; }
+
+.baris {
+  display: flex;
+  gap: var(--j2);
+  overflow-x: auto;
+  /* ruang untuk cincin fokus dan garis agar tidak terpotong oleh overflow */
+  padding: var(--j1);
+  margin: calc(var(--j1) * -1);
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.baris::-webkit-scrollbar { display: none; }
+@media (min-width: 768px) { .baris { flex-wrap: wrap; overflow-x: visible; } }

@@ -1,0 +1,50 @@
+.kotak {
+  display: flex;
+  align-items: center;
+  gap: var(--j2);
+  min-height: var(--tinggi-sentuh);
+  padding: 0 var(--j4);
+  background: var(--putih);
+  border: var(--garis);
+  border-radius: var(--r-md);
+  transition: background-color var(--d1) var(--ease);
+}
+.kotak:focus-within { outline: var(--ring); outline-offset: var(--ring-offset); }
+.kotakBanyak { align-items: flex-start; }
+.kotakGalat { border-color: var(--merah-tua); }
+.kotakMati { background: var(--krem-gelap); color: var(--tinta-lembut); }
+
+.kontrol {
+  flex: 1;
+  min-width: 0;
+  padding: var(--j3) 0;
+  border: 0;
+  outline: 0; /* cincin fokus dipasang pada .kotak */
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-isi);
+  font-size: var(--teks-isi); /* 16 px: mencegah zoom otomatis iOS */
+  line-height: 1.4;
+}
+.kontrol::placeholder { color: var(--tinta-lembut); opacity: 1; }
+textarea.kontrol { resize: vertical; min-height: var(--j8); }
+.angka { font-variant-numeric: tabular-nums; }
+
+.sisi { color: var(--tinta-lembut); font-weight: 600; white-space: nowrap; }
+
+.mata {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: var(--tinggi-sentuh);
+  height: var(--tinggi-sentuh);
+  margin-right: calc(var(--j2) * -1);
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--tinta);
+  cursor: pointer;
+}
+.mata:hover { background: var(--krem-gelap); }

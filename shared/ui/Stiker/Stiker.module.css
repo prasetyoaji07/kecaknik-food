@@ -1,0 +1,19 @@
+.stiker {
+  display: inline-block;
+  padding: var(--j1) var(--j3);
+  border: var(--garis);
+  border-radius: var(--r-sm);
+  box-shadow: var(--bayang-keras);
+  font-family: var(--font-display);
+  font-size: var(--teks-kecil);
+  line-height: 1.1;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: rotate(var(--sudut, 0deg));
+  user-select: none;
+}
+
+.kuning { background: var(--kuning); color: var(--tinta); }
+.merah { background: var(--merah); color: var(--krem); }
+.putih { background: var(--putih); color: var(--tinta); }

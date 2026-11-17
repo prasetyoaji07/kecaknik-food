@@ -1,0 +1,27 @@
+/* Gaya dasar bersama (bukan token): reset ringan, fokus, gerak. */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--krem);
+  color:var(--tinta);
+  font-family:var(--font-isi);
+  font-size:var(--teks-isi);
+  line-height:1.55;
+}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.1;margin:0}
+h1{font-size:var(--teks-h1)}
+h2{font-size:var(--teks-h2)}
+h3{font-size:var(--teks-h3)}
+img{max-width:100%;display:block}
+:focus-visible{outline:var(--ring);outline-offset:var(--ring-offset)}
+/* Teks hanya untuk pembaca layar (label yang tidak perlu tampil). Gaya dasar, bukan komponen. */
+.hanya-baca{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}

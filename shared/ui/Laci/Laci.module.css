@@ -1,0 +1,48 @@
+.tabir {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-drawer);
+  background: var(--tabir);
+  animation: muncul var(--d2) var(--ease);
+}
+
+/* mobile: penuh layar. desktop: panel kanan selebar --lebar-laci */
+.panel {
+  position: fixed;
+  z-index: var(--z-drawer);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--krem);
+  animation: geser var(--d3) var(--ease);
+}
+@media (min-width: 768px) {
+  .panel { width: var(--lebar-laci); border-left: var(--garis-tebal); }
+}
+
+.kepala {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--j3);
+  padding: var(--j4);
+  border-bottom: var(--garis);
+}
+.judul { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: var(--teks-h3); line-height: 1.15; }
+
+.isi { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: var(--j4); }
+
+.kaki {
+  display: flex;
+  flex-direction: column;
+  gap: var(--j3);
+  padding: var(--j4);
+  border-top: var(--garis);
+  background: var(--krem);
+}
+
+@keyframes muncul { from { opacity: 0; } }
+@keyframes geser { from { transform: translateX(100%); } }

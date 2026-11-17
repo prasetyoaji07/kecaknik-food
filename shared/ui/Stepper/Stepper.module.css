@@ -1,0 +1,17 @@
+.stepper { display: inline-flex; align-items: center; gap: var(--j2); }
+
+.angka {
+  width: var(--lebar-stepper);
+  min-height: var(--tinggi-sentuh);
+  padding: 0;
+  background: var(--putih);
+  color: var(--tinta);
+  border: var(--garis);
+  border-radius: var(--r-md);
+  font-family: var(--font-display);
+  font-size: 1.125rem; /* tidak kurang dari 16 px: mencegah zoom otomatis iOS */
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+.angka:focus-visible { outline: var(--ring); outline-offset: var(--ring-offset); }
+.angka:disabled { background: var(--krem-gelap); color: var(--tinta-lembut); border-color: var(--tinta-lembut); }

@@ -1,0 +1,55 @@
+.wadah {
+  position: fixed;
+  z-index: var(--z-toast);
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: var(--j4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--j2);
+  pointer-events: none; /* area kosong tidak menghalangi klik di belakangnya */
+}
+@media (min-width: 768px) {
+  .wadah { left: auto; top: var(--j4); bottom: auto; align-items: flex-end; }
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--j3);
+  width: 100%;
+  max-width: var(--lebar-toast);
+  padding: var(--j3) var(--j3) var(--j3) var(--j4);
+  background: var(--putih);
+  border: var(--garis);
+  border-radius: var(--r-md);
+  box-shadow: var(--bayang-keras);
+  pointer-events: auto;
+  animation: masuk var(--d2) var(--ease);
+}
+.berhasil { background: var(--lime); }
+.info { background: var(--kuning); }
+.galat { background: var(--putih); border-color: var(--merah); color: var(--merah-tua); }
+
+.ikon { flex: none; }
+.pesan { flex: 1; min-width: 0; margin: 0; font-weight: 600; line-height: 1.35; }
+
+.tutup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: var(--tinggi-sentuh);
+  height: var(--tinggi-sentuh);
+  margin: calc(var(--j3) * -1) 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.tutup:hover { background: var(--krem-gelap); }
+
+@keyframes masuk { from { opacity: 0; transform: translateY(var(--j2)); } }

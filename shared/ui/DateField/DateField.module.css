@@ -1,0 +1,28 @@
+.kotak {
+  display: flex;
+  align-items: center;
+  min-height: var(--tinggi-sentuh);
+  padding: 0 var(--j4);
+  background: var(--putih);
+  border: var(--garis);
+  border-radius: var(--r-md);
+}
+.kotak:focus-within { outline: var(--ring); outline-offset: var(--ring-offset); }
+.kotakGalat { border-color: var(--merah-tua); }
+.kotakMati { background: var(--krem-gelap); color: var(--tinta-lembut); }
+
+.kontrol {
+  flex: 1;
+  min-width: 0;
+  min-height: var(--tinggi-sentuh);
+  padding: 0;
+  border: 0;
+  outline: 0; /* cincin fokus dipasang pada .kotak */
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-isi);
+  font-size: var(--teks-isi); /* mencegah zoom otomatis iOS */
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+.kontrol:disabled { cursor: not-allowed; }
