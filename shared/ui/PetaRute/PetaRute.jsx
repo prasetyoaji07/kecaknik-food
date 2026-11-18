@@ -42,7 +42,6 @@ export function PetaRute({ toko, lokasi, status, tinggi, className, judul = 'Pet
       lapisanRef.current = null;
     };
     // Peta dibuat ulang hanya bila koordinat belum tersedia saat render pertama.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [valid]);
 
   useEffect(() => {

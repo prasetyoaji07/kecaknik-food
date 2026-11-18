@@ -3,9 +3,10 @@
 .navigasi{display:flex;align-items:center;justify-content:center;gap:var(--j5)}
 .navigasi a,.navigasiMobile a{color:var(--tinta);font-weight:700;text-decoration:none;min-height:var(--tinggi-sentuh);display:inline-flex;align-items:center;border-bottom:var(--j1) solid transparent}
 .navigasi a:hover,.navigasiMobile a:hover,.aktif{color:var(--merah)!important;border-bottom-color:var(--merah)!important}
-.keranjang{flex:none}
+.keranjang{flex:none;position:relative}
 .jumlah{display:inline-grid;place-items:center;min-width:1.5rem;height:1.5rem;margin-left:var(--j1);padding:0 var(--j1);border-radius:var(--r-pill);background:var(--merah);color:var(--putih);font-size:var(--teks-kecil)}
-.tombolMenu{display:none}
+.tombolMenu{display:none;position:relative}
+.jumlahMenu{position:absolute;top:-.5rem;right:-.5rem;display:grid;place-items:center;min-width:1.5rem;height:1.5rem;padding:0 var(--j1);border-radius:var(--r-pill);border:.125rem solid var(--krem);background:var(--merah);color:var(--putih);font-size:var(--teks-kecil);font-weight:800;line-height:1}
 .isiLaci{display:grid;gap:var(--j5)}
 .navigasiMobile{display:grid;gap:var(--j2)}
 .navigasiMobile a{justify-content:flex-start;padding:0 var(--j2);border-bottom:var(--garis)}
@@ -13,6 +14,6 @@
  .wadah{top:var(--j2);padding-top:var(--j2)}
  .pill{min-height:0;padding:var(--j2) var(--j3);gap:var(--j2)}
  .navigasi,.keranjang{display:none}
- .tombolMenu{display:inline-flex;flex:none}
+ .tombolMenu{display:inline-flex;flex:none;position:relative}
 }
 @media(min-width:48rem) and (max-width:63.9375rem){.pill{gap:var(--j2);padding-inline:var(--j3)}.navigasi{gap:var(--j3)}.navigasi a{font-size:var(--teks-kecil)}}

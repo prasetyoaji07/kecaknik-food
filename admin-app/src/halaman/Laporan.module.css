@@ -1,0 +1,17 @@
+.kontrol{display:grid;gap:var(--j3);padding:var(--j4);border:var(--garis);border-radius:var(--r-lg);background:var(--putih)}
+.tanggal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) auto auto;align-items:end;gap:var(--j3)}
+.rentang{margin:0;color:var(--tinta-lembut);font-size:var(--teks-kecil)}
+.statistik{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--j3)}
+.tabelWrap{display:grid;gap:var(--j3);padding:var(--j4);border:var(--garis);border-radius:var(--r-lg);background:var(--putih);min-width:0}
+.tabelKepala h3{margin:0;font-size:var(--teks-h3)}
+.tabelKepala p{margin:var(--j1) 0 0;color:var(--tinta-lembut);font-size:var(--teks-kecil)}
+.gulir{overflow-x:auto}
+.tabel{width:100%;border-collapse:collapse;text-align:left;white-space:nowrap}
+.tabel th,.tabel td{padding:var(--j3);border-bottom:var(--garis);font-size:var(--teks-kecil)}
+.tabel thead th{color:var(--tinta-lembut);font-weight:800;background:var(--krem)}
+.tabel tbody td:nth-child(n+2),.tabel tfoot th:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums}
+.tabel tfoot th{border-top:2px solid var(--garis-tebal);border-bottom:0;font-weight:900}
+.kosong{display:grid;justify-items:center;gap:var(--j2);padding:var(--j6);color:var(--tinta-lembut);text-align:center}
+.kosong strong{color:var(--tinta)}
+@media(max-width:850px){.statistik{grid-template-columns:1fr}.tanggal{grid-template-columns:repeat(2,minmax(0,1fr))}.tanggal button{justify-self:start}}
+@media(max-width:520px){.kontrol,.tabelWrap{padding:var(--j3)}.tanggal{grid-template-columns:1fr}}

@@ -24,8 +24,8 @@ export function KartuProduk({
     <article className={gabung(gaya.kartu, gaya[statusAman], className)}>
       <div className={gaya.media}>
         <FotoProduk src={fotoTampil} alt={altFoto || namaTampil} namaProduk={namaTampil} />
-        {statusAman === 'pre-order' ? <Stiker warna="kuning" indeks={indeksStiker}>PRE-ORDER</Stiker> : null}
-        {statusAman === 'unggulan' ? <Stiker warna="merah" indeks={indeksStiker}>FAVORIT</Stiker> : null}
+        {statusAman === 'pre-order' ? <Stiker warna="kuning" indeks={indeksStiker} className={gaya.stikerKartu}>PRE-ORDER</Stiker> : null}
+        {statusAman === 'unggulan' ? <Stiker warna="merah" indeks={indeksStiker} className={gaya.stikerKartu}>FAVORIT</Stiker> : null}
         {habis ? <span className={gaya.labelHabis}>Habis</span> : null}
       </div>
       <div className={gaya.isi}>

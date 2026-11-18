@@ -29,6 +29,8 @@ const NAMA_TERLARANG = /[^\p{L}\p{M} .'’-]/gu;
 const POLA_TELEPON = /^62\d{8,13}$/;
 const POLA_KODE = /^KCK-[2-9A-HJKMNP-Z]{6}$/;
 // Karakter kontrol selain baris baru (\n) dibuang dari teks bebas.
+// Karakter kontrol memang sengaja dicocokkan untuk dibuang dari teks bebas.
+// eslint-disable-next-line no-control-regex
 const KONTROL = /[\u0000-\u0008\u000B-\u001F\u007F]/g;
 
 const ok = (nilai) => ({ ok: true, nilai });

@@ -25,13 +25,13 @@ const WAKTU_PETUNJUK = 3000;
  * Satu-satunya cara membuat input teks (DESIGN bagian 5 dan 6).
  * kind: nama | telepon | rupiah | angka | kode | teks | alamat | sandi.
  * Terkendali: `nilai` (teks) dan `onUbah(teks)`. Karakter terlarang disaring di onChange
- * (termasuk saat tempel). `galat` dari induk (mis. saat kirim) menimpa galat otomatis,
+ * (termasuk saat tempel). `tanpaPenghitung` menyembunyikan penghitung karakter (mis. kolom cari). `galat` dari induk (mis. saat kirim) menimpa galat otomatis,
  * yang baru muncul setelah field disentuh (blur).
  */
 export const Field = forwardRef(function Field(
   {
     kind = 'teks', label, nilai = '', onUbah, bantuan, galat, awalan, akhiran, wajib = false,
-    nonaktif = false, baris, min, maks, maksKarakter, placeholder, nama, id, onBlur, onFokus,
+    nonaktif = false, baris, min, maks, maksKarakter, tanpaPenghitung = false, placeholder, nama, id, onBlur, onFokus,
     className, ...sisa
   },
   ref,
@@ -117,7 +117,7 @@ export const Field = forwardRef(function Field(
   };
   delete sifatKontrol.type;
 
-  const penghitung = batasTeks && (kind === 'teks' || kind === 'alamat')
+  const penghitung = !tanpaPenghitung && batasTeks && (kind === 'teks' || kind === 'alamat')
     ? `${String(nilai ?? '').length}/${batasTeks}`
     : null;
 

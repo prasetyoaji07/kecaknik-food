@@ -6,7 +6,6 @@ import { ambilProduk } from '../api/produk.js';
 import { API_BASE } from '../api/klien.js';
 import gaya from './Beranda.module.css';
 
-const uang = (n) => `Rp${new Intl.NumberFormat('id-ID').format(Number(n) || 0)}`;
 const foto = (p) => p?.gambar_url ? `${API_BASE}${p.gambar_url}` : null;
 const kategori = [
   { id:'kue', nama:'Kue', gambar:'Kue pilihan untuk teman minum teh' },

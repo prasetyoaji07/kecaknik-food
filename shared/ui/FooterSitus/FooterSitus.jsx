@@ -26,7 +26,9 @@ export function FooterSitus({ preorderAktif = false }) {
           <h2>Hubungi kami</h2>
           {toko.alamat ? <p>{toko.alamat}</p> : dev ? <p>{tampilkan('', 'alamat toko')}</p> : null}
           {toko.waAdmin ? <p><a href={`https://wa.me/${toko.waAdmin}`} target="_blank" rel="noreferrer">WhatsApp kami</a></p> : dev ? <p>{tampilkan('', 'WhatsApp')}</p> : null}
-          {toko.jamBuka ? <p>{toko.jamBuka}</p> : dev ? <p>{tampilkan('', 'jam buka')}</p> : null}
+          {toko.jamBuka?.length
+            ? toko.jamBuka.map((j) => <p key={j.label}>{j.label}: {j.jam}</p>)
+            : dev ? <p>{tampilkan('', 'jam buka')}</p> : null}
         </section>
         <nav className={gaya.kolom} aria-label="Jelajah">
           <h2>Jelajah</h2>

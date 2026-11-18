@@ -3,8 +3,6 @@
   align-items: center;
   justify-content: center;
   padding: var(--j2); /* ruang kosong minimal --j2 di sekeliling logo */
-  background: var(--krem);
-  border: var(--garis);
   border-radius: var(--r-md);
   line-height: 0;
   text-decoration: none;

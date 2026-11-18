@@ -71,7 +71,6 @@ export function PetaPilih({ lat = null, lng = null, nilai, onUbah, tinggi, nonak
       petaRef.current = null; penandaRef.current = null; lingkaranRef.current = null;
     };
     // Peta dibuat sekali; perubahan koordinat ditangani efek berikutnya.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

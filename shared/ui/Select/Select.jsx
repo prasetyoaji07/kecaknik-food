@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { useId, useState } from 'react';
 import * as RS from '@radix-ui/react-select';
 import { Check, ChevronDown } from 'lucide-react';
 import { gabung } from '../gabung.js';
@@ -19,6 +19,7 @@ export function Select({
   label, nilai = '', onUbah, opsi = [], placeholder = 'Pilih salah satu', bantuan, galat,
   wajib = false, nonaktif = false, nama, id, className, ...sisa
 }) {
+  const [terbuka, setTerbuka] = useState(false);
   const idAuto = useId();
   const idPemicu = id ?? idAuto;
   const idBantuan = `${idPemicu}-bantuan`;
@@ -36,7 +37,7 @@ export function Select({
       galat={galat}
       className={className}
     >
-      <RS.Root value={nilai || ''} onValueChange={onUbah} disabled={nonaktif} name={nama} required={wajib}>
+      <RS.Root value={nilai || ''} onValueChange={onUbah} open={terbuka} onOpenChange={setTerbuka} disabled={nonaktif} name={nama} required={wajib}>
         <RS.Trigger
           id={idPemicu}
           className={gabung(gaya.pemicu, galat && gaya.pemicuGalat)}
@@ -50,8 +51,9 @@ export function Select({
           </RS.Icon>
         </RS.Trigger>
         <RS.Portal>
-          <div className={gaya.tabir} aria-hidden="true" />
-          <RS.Content
+          <div className={gaya.portalIsi}>
+            {terbuka ? <div className={gaya.tabir} aria-hidden="true" /> : null}
+            <RS.Content
             position="popper"
             sideOffset={8}
             collisionPadding={PADDING_TABRAKAN}
@@ -68,7 +70,8 @@ export function Select({
                 </RS.Item>
               ))}
             </RS.Viewport>
-          </RS.Content>
+            </RS.Content>
+          </div>
         </RS.Portal>
       </RS.Root>
     </BungkusBidang>

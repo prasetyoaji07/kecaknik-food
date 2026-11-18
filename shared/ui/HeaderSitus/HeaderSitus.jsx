@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, ShoppingBag } from 'lucide-react';
+import { Menu, ShoppingBag, X } from 'lucide-react';
 import { Logo } from '../Logo/Logo.jsx';
 import { Button } from '../Button/Button.jsx';
 import { Laci } from '../Laci/Laci.jsx';
@@ -47,17 +47,19 @@ export function HeaderSitus({ jumlahKeranjang = 0, onBukaKeranjang, preorderAkti
           aria-label={`Buka keranjang, ${jumlahKeranjang} item`}
           className={gaya.keranjang}
         >
-          Keranjang{jumlahKeranjang > 0 ? <span className={gaya.jumlah}>{jumlahKeranjang}</span> : null}
+          Keranjang{jumlahKeranjang > 0 ? <span className={gaya.jumlah} aria-hidden="true">{jumlahKeranjang}</span> : null}
         </Button>
-        <Button
-          variasi="sekunder"
-          ukuran="md"
-          ikonKiri={menuBuka ? <X size={20} /> : <Menu size={20} />}
-          aria-label={menuBuka ? 'Tutup menu' : 'Buka menu'}
-          aria-expanded={menuBuka}
-          onClick={() => setMenuBuka(true)}
-          className={gaya.tombolMenu}
-        />
+        <span className={gaya.tombolMenu}>
+          <Button
+            variasi="sekunder"
+            ukuran="md"
+            ikonKiri={menuBuka ? <X size={20} /> : <Menu size={20} />}
+            aria-label={`${menuBuka ? 'Tutup menu' : 'Buka menu'}${jumlahKeranjang > 0 ? `, ada ${jumlahKeranjang} item di keranjang` : ''}`}
+            aria-expanded={menuBuka}
+            onClick={() => setMenuBuka(true)}
+          />
+          {jumlahKeranjang > 0 ? <span className={gaya.jumlahMenu} aria-hidden="true">{jumlahKeranjang}</span> : null}
+        </span>
       </div>
       <Laci buka={menuBuka} onTutup={() => setMenuBuka(false)} judul="Jelajah Kecaknik">
         <div className={gaya.isiLaci}>

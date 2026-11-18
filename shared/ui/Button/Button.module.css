@@ -54,7 +54,7 @@
 .md { }
 .lg { min-height: var(--j7); padding: 0 var(--j6); font-size: 1.125rem; }
 
-.penuh { width: 100%; }
+.penuh { width: 100%; max-width: 100%; min-width: 0; padding-left: var(--j4); padding-right: var(--j4); white-space: normal; text-align: center; line-height: 1.25; }
 .hanyaIkon { width: var(--tinggi-sentuh); padding: 0; }
 .lg.hanyaIkon { width: var(--j7); }
 

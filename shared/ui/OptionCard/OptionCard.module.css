@@ -2,9 +2,9 @@
 .legenda { padding: 0; font-weight: 600; font-size: var(--teks-kecil); margin-bottom: var(--j2); }
 .wajib { color: var(--merah-tua); }
 
-.daftar { display: grid; gap: var(--j3); grid-template-columns: 1fr; }
+.daftar { display: grid; gap: var(--j3); grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 30rem) { .daftar { grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); } }
-.satuKolom { grid-template-columns: 1fr; }
+.satuKolom { grid-template-columns: minmax(0, 1fr); }
 
 .kartu {
   position: relative;

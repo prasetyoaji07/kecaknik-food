@@ -11,8 +11,8 @@
   --garis:2px solid var(--tinta);  --garis-tebal:3px solid var(--tinta);
   --r-sm:10px; --r-md:16px; --r-lg:24px; --r-pill:999px;
   /* bayangan: keras untuk benda yang bisa ditekan, lembut tipis untuk kartu diam */
-  --bayang-keras:3px 3px 0 var(--tinta);
-  --bayang-tekan:1px 1px 0 var(--tinta);
+  --bayang-keras:none; /* sebelumnya: 3px 3px 0 var(--tinta); */
+  --bayang-tekan:none; /* sebelumnya: 1px 1px 0 var(--tinta); */
   --bayang-kartu:0 6px 16px -10px rgba(43,43,43,.35);
   /* jarak (kelipatan 4) */
   --j1:4px; --j2:8px; --j3:12px; --j4:16px; --j5:24px; --j6:32px; --j7:48px; --j8:64px; --j9:96px;

@@ -1,0 +1,121 @@
+/* Halaman Produk admin. Hanya memakai token dari shared/ui/tokens.css. */
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--j3);
+  align-items: end;
+  padding: var(--j4);
+  border: var(--garis);
+  border-radius: var(--r-lg);
+  background: var(--putih);
+}
+.toolbar > button { width: 100%; }
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--j4);
+  align-items: start;
+  min-width: 0;
+}
+
+.daftar,
+.editor {
+  display: grid;
+  gap: var(--j3);
+  min-width: 0;
+}
+.editor {
+  padding: var(--j4);
+  border: var(--garis);
+  border-radius: var(--r-lg);
+  background: var(--putih);
+  scroll-margin-top: var(--j9);
+}
+
+/* baris produk: foto + info, aksi di baris bawah */
+.baris {
+  display: grid;
+  grid-template-columns: var(--j8) minmax(0, 1fr);
+  gap: var(--j3) var(--j4);
+  align-items: start;
+  padding: var(--j4);
+  border: var(--garis);
+  border-radius: var(--r-md);
+  background: var(--putih);
+}
+.dipilih { border-color: var(--merah); box-shadow: var(--bayang-keras); }
+
+.fotoKecil {
+  display: grid;
+  place-items: center;
+  width: var(--j8);
+  height: var(--j8);
+  overflow: hidden;
+  border-radius: var(--r-sm);
+  background: var(--krem-gelap);
+  color: var(--tinta-lembut);
+}
+.fotoKecil img { width: 100%; height: 100%; object-fit: cover; }
+
+.info { display: grid; gap: var(--j1); min-width: 0; }
+.info strong { overflow-wrap: anywhere; font-weight: 800; }
+.info span,
+.info small { color: var(--tinta-lembut); font-size: var(--teks-kecil); }
+.info b { font-weight: 800; }
+
+.aksi {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--j2);
+}
+
+/* editor */
+.form { display: grid; gap: var(--j4); min-width: 0; }
+.form h3 { margin: 0; font-family: var(--font-display); font-size: var(--teks-h3); }
+.hint { margin: 0; color: var(--tinta-lembut); font-size: var(--teks-kecil); }
+.dua,
+.tanggal { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--j3); }
+.cek { align-self: end; min-height: var(--tinggi-sentuh); }
+
+.grup {
+  display: grid;
+  gap: var(--j3);
+  padding: var(--j4);
+  border: var(--garis);
+  border-radius: var(--r-md);
+  background: var(--krem);
+  min-width: 0;
+}
+.grup > header,
+.opsiKepala {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--j3);
+}
+.opsi {
+  display: grid;
+  gap: var(--j3);
+  padding: var(--j3);
+  border: var(--garis);
+  border-radius: var(--r-md);
+  background: var(--putih);
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .toolbar { grid-template-columns: minmax(0, 1fr) minmax(0, 14rem) auto; }
+  .toolbar > button { width: auto; }
+  .dua { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tanggal { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .layout { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); }
+  .baris { grid-template-columns: var(--j8) minmax(0, 1fr) auto; }
+  .aksi { grid-column: auto; justify-content: flex-end; }
+  .tanggal { grid-template-columns: minmax(0, 1fr); }
+}

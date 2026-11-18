@@ -3,19 +3,22 @@
 
 export const toko = {
   nama: 'Kecaknik Food',
-  alamat: '', // D-17: isi pemilik
-  lat: null, // D-17
-  lng: null, // D-17
-  jamBuka: '', // D-17
+  alamat: 'Unnamed Road, Sukasari, Kec. Serang Baru, Kabupaten Bekasi, Jawa Barat 17330',
+  lat: -6.379017,
+  lng: 107.105995,
+  jamBuka: [
+    { label: 'Pesan online', jam: 'Buka 24 jam' },
+    { label: 'COD dan lainnya', jam: '08:00 - 21:00 WIB' },
+  ],
   waAdmin: '6281999915104', // D-16 (dari pemilik): format 62...
 };
 
 export const rekening = [
-  // D-15: DANA sudah diisi pemilik (nomor); atas nama dan BCA, BRI, GoPay masih TBD
-  { kode: 'dana', nama: 'DANA', nomor: '6281999915104', atasNama: 'TBD' },
-  { kode: 'bca', nama: 'BCA', nomor: 'TBD', atasNama: 'TBD' },
-  { kode: 'bri', nama: 'BRI', nomor: 'TBD', atasNama: 'TBD' },
-  { kode: 'gopay', nama: 'GoPay', nomor: 'TBD', atasNama: 'TBD' },
+  // D-15: atas nama semua rekening = pemilik; nomor BCA, BRI, GoPay masih TBD
+  { kode: 'dana', nama: 'DANA', nomor: '6281999915104', atasNama: 'Antonius Randie H.' },
+  { kode: 'bca', nama: 'BCA', nomor: 'TBD', atasNama: 'Antonius Randie H.' },
+  { kode: 'bri', nama: 'BRI', nomor: 'TBD', atasNama: 'Antonius Randie H.' },
+  { kode: 'gopay', nama: 'GoPay', nomor: 'TBD', atasNama: 'Antonius Randie H.' },
 ];
 
 export const kanal = ['website', 'whatsapp', 'facebook', 'langsung'];

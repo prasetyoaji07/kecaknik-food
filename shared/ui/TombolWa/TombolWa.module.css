@@ -1,2 +1,2 @@
-.kontainer { display: flex; min-width: 0; flex-direction: column; gap: var(--j2); }
-.catatan { margin: 0; color: var(--tinta-lembut); font-size: var(--teks-kecil); }
+.kontainer { display: flex; width: 100%; max-width: 100%; min-width: 0; flex-direction: column; gap: var(--j2); }
+.catatan { margin: 0; text-align: center; color: var(--tinta-lembut); font-size: var(--teks-kecil); }
